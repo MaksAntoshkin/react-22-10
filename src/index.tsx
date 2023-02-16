@@ -1,23 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-function List() {
-    return (
-        <React.Fragment>
-            <ul>
-                <li>List1</li>
-                <li>List2</li>
-                <li>List3</li>
-            </ul>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-                aperiam reprehenderit maiores at sed perspiciatis architecto
-                aliquam! Ea fugiat placeat natus nobis. Dicta eum labore
-                deleniti ipsum architecto porro dolor!
-            </p>
-        </React.Fragment>
-    )
-}
+import List from './List'
 
 type TitleProps = {
     name: string
