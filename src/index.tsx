@@ -1,27 +1,40 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// const title = React.createElement('h1', { id: 'title' }, 'Hello React.js')
+function List() {
+    return (
+        <React.Fragment>
+            <ul>
+                <li>List1</li>
+                <li>List2</li>
+                <li>List3</li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+                aperiam reprehenderit maiores at sed perspiciatis architecto
+                aliquam! Ea fugiat placeat natus nobis. Dicta eum labore
+                deleniti ipsum architecto porro dolor!
+            </p>
+        </React.Fragment>
+    )
+}
 
-const title = <h1 id="title">Hello React</h1>
+function Title() {
+    return <h1>Hello TS</h1>
+}
 
-const content = (
-    <div>
-        {title}
-        {10 + 10}
-        <ul className="list">
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-        </ul>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum
-            odit quas, nulla voluptatum accusantium itaque veniam accusamus
-            natus suscipit velit! Quidem illum accusantium iusto ipsam obcaecati
-            cum, vitae mollitia!
-        </p>
-    </div>
-)
+const App = () => {
+    return (
+        <div className="app">
+            <Title />
+            <List />
+        </div>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode>{content}</React.StrictMode>)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
