@@ -1,4 +1,4 @@
-import './List.css'
+import classes from './List.module.css'
 
 type Props = {}
 const List = (props: Props) => {
@@ -10,7 +10,11 @@ const List = (props: Props) => {
     }
     return (
         <>
-            <ul className={`article-desc ${data ? 'content' : 'test'}`}>
+            <ul
+                className={`${classes['article-desc']} ${
+                    data ? classes.content : classes.test
+                }`}
+            >
                 <li>List1</li>
                 <li>List2</li>
                 <li>List3</li>
