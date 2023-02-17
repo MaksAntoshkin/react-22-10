@@ -1,6 +1,7 @@
 import classes from './List.module.css'
 
 type Props = {}
+const { content, test, ['article-desc']: articleDesc } = classes
 const List = (props: Props) => {
     let data = true
     const styleObj = {
@@ -10,11 +11,7 @@ const List = (props: Props) => {
     }
     return (
         <>
-            <ul
-                className={`${classes['article-desc']} ${
-                    data ? classes.content : classes.test
-                }`}
-            >
+            <ul className={`${articleDesc} ${data ? content : test}`}>
                 <li>List1</li>
                 <li>List2</li>
                 <li>List3</li>
