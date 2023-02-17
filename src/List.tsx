@@ -1,9 +1,8 @@
-import classes from './List.module.css'
+import './List.scss'
 
 type Props = {}
-const { content, test, ['article-desc']: articleDesc } = classes
 const List = (props: Props) => {
-    let data = true
+    let data = false
     const styleObj = {
         color: 'white',
         backgroundColor: data ? 'purple' : 'tomato',
@@ -11,7 +10,7 @@ const List = (props: Props) => {
     }
     return (
         <>
-            <ul className={`${articleDesc} ${data ? content : test}`}>
+            <ul className={`article-desc ${data ? 'content' : 'test'}`}>
                 <li>List1</li>
                 <li>List2</li>
                 <li>List3</li>
