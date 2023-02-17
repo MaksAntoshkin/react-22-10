@@ -2,7 +2,7 @@ import './List.css'
 
 type Props = {}
 const List = (props: Props) => {
-    let data = false
+    let data = true
     const styleObj = {
         color: 'white',
         backgroundColor: data ? 'purple' : 'tomato',
@@ -10,7 +10,7 @@ const List = (props: Props) => {
     }
     return (
         <>
-            <ul className="content">
+            <ul className={`article-desc ${data ? 'content' : 'test'}`}>
                 <li>List1</li>
                 <li>List2</li>
                 <li>List3</li>
