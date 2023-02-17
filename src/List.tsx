@@ -1,5 +1,6 @@
 type Props = {}
 const List = (props: Props) => {
+    let data = false
     return (
         <>
             <ul>
@@ -10,7 +11,7 @@ const List = (props: Props) => {
             <p
                 style={{
                     color: 'white',
-                    backgroundColor: 'green',
+                    backgroundColor: data ? 'purple' : 'tomato',
                     padding: '15px',
                 }}
             >
