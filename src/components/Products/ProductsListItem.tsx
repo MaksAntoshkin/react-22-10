@@ -1,5 +1,5 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
-import './ProductListItem.scss'
+import './ProductsListItem.scss'
 
 type Props = {}
 const ProductsListItem = (props: Props) => {
