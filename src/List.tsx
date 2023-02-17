@@ -1,3 +1,5 @@
+import './List.css'
+
 type Props = {}
 const List = (props: Props) => {
     let data = false
@@ -8,7 +10,7 @@ const List = (props: Props) => {
     }
     return (
         <>
-            <ul>
+            <ul className="content">
                 <li>List1</li>
                 <li>List2</li>
                 <li>List3</li>
