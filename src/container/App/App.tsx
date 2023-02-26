@@ -28,7 +28,6 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <button onClick={() => addProductToCart(2, 5)}>Add to Cart</button>
             <Main addProductToCart={addProductToCart} />
             <Footer />
         </StyledEngineProvider>
