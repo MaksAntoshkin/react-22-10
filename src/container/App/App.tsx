@@ -15,13 +15,12 @@ const App = (props: Props) => {
     const [productsInCart, setProductsInCart] = useState<ProductsInCartType>({
         1: 5,
         2: 5,
-        3: 1,
     })
 
     const addProductToCart = (id: number, count: number) => {
         setProductsInCart((prevState) => ({
             ...prevState,
-            [id]: prevState[id] + count,
+            [id]: (prevState[id] || 0) + count,
         }))
     }
 
