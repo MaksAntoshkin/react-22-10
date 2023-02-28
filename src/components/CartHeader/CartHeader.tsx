@@ -19,7 +19,7 @@ const CartHeader = ({
             <div>
                 {Object.keys(productsInCart).map((productId) => (
                     <div key={productId}>
-                        {productsArray[parseInt(productId) - 1].title}:{' '}
+                        {productsObject[parseInt(productId)].title}:{' '}
                         {productsInCart[parseInt(productId)]}
                     </div>
                 ))}
