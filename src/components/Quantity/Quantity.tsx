@@ -8,7 +8,7 @@ type Props = {
 
 const Quantity = ({ count, onDecrement, onIncrement }: Props) => {
     return (
-        <div>
+        <div className="product-quantity">
             {' '}
             <Button
                 variant="outlined"
