@@ -2,34 +2,46 @@ import { Grid, Typography } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
 import productsArray from 'utils/productsArray'
 
-type Props = {}
-
-type Product = {
-    title: string
-    description: string
-    type: string
-    capacity: string
-    price: number
+type Props = {
+    addProductToCart: (count: number, price: number) => void
 }
 
-const ProductsList = (props: Props) => {
+const ProductsList = ({ addProductToCart }: Props) => {
     return (
         <>
-            <Typography variant="h3" component="h2" align="center">
+            <Typography
+                variant="h3"
+                component="h2"
+                align="center"
+                sx={{ marginBottom: '30px' }}
+            >
                 List of Products
             </Typography>
             <Grid container spacing={4}>
-                {productsArray.map((product: Product) => (
-                    <Grid item xs={12} sm={6} md={4}>
-                        <ProductsListItem
-                            title={product.title}
-                            description={product.description}
-                            type={product.type}
-                            capacity={product.capacity}
-                            price={product.price}
-                        />
-                    </Grid>
-                ))}
+                {productsArray.map(
+                    ({
+                        id,
+                        title,
+                        description,
+                        capacity,
+                        type,
+                        price,
+                        image,
+                    }) => (
+                        <Grid item xs={12} sm={6} md={4} key={id}>
+                            <ProductsListItem
+                                id={id}
+                                title={title}
+                                description={description}
+                                type={type}
+                                capacity={capacity}
+                                price={price}
+                                image={image}
+                                addProductToCart={addProductToCart}
+                            />
+                        </Grid>
+                    )
+                )}
             </Grid>
         </>
     )
